@@ -1,3 +1,6 @@
+// Error.ts import
+import { NetworkError, DataError } from "./errors.js"
+
 // Fetches a list of products with id, name, and price
 export const fetchProductCatalog = (): Promise<
   { id: number; name: string; price: number }[]
@@ -14,7 +17,7 @@ export const fetchProductCatalog = (): Promise<
           { id: 6, name: '34" Monitor', price: 365 },
         ]);
       } else {
-        reject("Failed to fetch product catalog");
+        reject(new NetworkError("Network Error: Failed to fetch product catalog"));
       }
     }, 1000);
   });
@@ -57,7 +60,7 @@ export const fetchProductReviews = (
           },
         ]);
       } else {
-        reject(`Reviews for Product ID: ${productId} failed to load`);
+        reject(new DataError(`Reviews for Product ID: ${productId} failed to load`));
       }
     }, 1500);
   });
@@ -78,7 +81,7 @@ export const fetchSalesReport = (): Promise<{
           averagePrice: 333.33,
         });
       } else {
-        reject("Failed to fetch sales report");
+        reject(new NetworkError("Network Error: Failed to fetch sales report"));
       }
     }, 1000);
   });
