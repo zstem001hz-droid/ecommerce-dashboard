@@ -86,17 +86,17 @@ export const fetchSalesReport = (): Promise<{
 
 // CONSOLE LOG TESTING //
 
-//Test fetchProductCatalog
-fetchProductCatalog()
-  .then((products) => console.log("Products:", products))
-  .catch((error) => console.error("Error:", error));
+// //Test fetchProductCatalog
+// fetchProductCatalog()
+//   .then((products) => console.log("Products:", products))
+//   .catch((error) => console.error("Error:", error));
 
-// Test fetchProductReviews
-fetchProductReviews(1)
-  .then((reviews) => console.log("Reviews:", reviews))
-  .catch((error) => console.error("Error:", error));
+// // Test fetchProductReviews
+// fetchProductReviews(1)
+//   .then((reviews) => console.log("Reviews:", reviews))
+//   .catch((error) => console.error("Error:", error));
 
-// Test fetchSalesReport
-fetchSalesReport()
-  .then((report) => console.log("Sales report:", report))
-  .catch((error) => console.error("Error:", error));
+// // Test fetchSalesReport
+// fetchSalesReport()
+//   .then((report) => console.log("Sales report:", report))
+//   .catch((error) => console.error("Error:", error));
