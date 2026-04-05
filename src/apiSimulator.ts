@@ -17,7 +17,7 @@ export const fetchProductCatalog = (): Promise<
           { id: 6, name: '34" Monitor', price: 365 },
         ]);
       } else {
-        reject(new NetworkError("Network Error: Failed to fetch product catalog"));
+        reject(new NetworkError("Failed to fetch product catalog"));
       }
     }, 1000);
   });
@@ -81,7 +81,7 @@ export const fetchSalesReport = (): Promise<{
           averagePrice: 333.33,
         });
       } else {
-        reject(new NetworkError("Network Error: Failed to fetch sales report"));
+        reject(new NetworkError("Failed to fetch sales report"));
       }
     }, 1000);
   });
