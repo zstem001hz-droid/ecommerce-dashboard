@@ -1,0 +1,14 @@
+# Environment variables
+.env
+
+# Compiled output
+dist
+
+# Dependencies
+node_modules
+
+# TypeScript build info
+*.tsbuildinfo
+
+# OS files
+.DS_Store
